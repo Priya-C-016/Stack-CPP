@@ -1,0 +1,11 @@
+🔍 How It Works:
+Stack stores indices of elements in decreasing order of their values.
+
+When a new element is greater, we found the next greater element for the elements popped from the stack.
+
+📌 Want variations?
+🔄 Previous Greater Element? → Loop from right to left
+
+🔄 Next Smaller Element? → Change comparison to <
+
+🧠 Histogram Area? → Use monotonic stack to track boundaries
