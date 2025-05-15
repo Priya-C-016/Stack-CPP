@@ -30,21 +30,22 @@ vector<int> monotonicIncreasing(vector<int>nums){
 }
 
 
-vector<int> nextGreaterElement(vector<int>& nums) {
-    int n = nums.size();
-    vector<int> result(n, -1);  // default: -1 if no greater element exists
-    stack<int> st;  // stores indices of elements
-
-    for (int i = 0; i < n; i++) {
-        // Check if current element is greater than stack's top
-        while (!st.empty() && nums[i] > nums[st.top()]) {
-            result[st.top()] = nums[i];  // Found next greater for index on top
+vector<int> monotonicDecreasing(vector<int>& nums) {
+    stack<int> st;
+    for (int num : nums) {
+        while (!st.empty() && st.top() < num) {
             st.pop();
         }
-        st.push(i);  // Push current index to stack
+        st.push(num);
     }
-
+    vector<int> result;
+    while (!st.empty()) {
+        result.push_back(st.top());
+        st.pop();
+    }
+    reverse(result.begin(), result.end()); // To get the order of appearance
     return result;
+
 }
 
 
@@ -57,7 +58,7 @@ int main(){
         cout << num << " ";
     }
     cout << endl;
-    vector<int> ans = nextGreaterElement(nums);
+    vector<int> ans =monotonicDecreasing(nums);
     
     for (int val : ans)
         cout << val << " ";
