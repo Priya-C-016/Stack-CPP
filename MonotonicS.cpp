@@ -4,15 +4,29 @@ using namespace std;
 vector<int> monotonicIncreasing(vector<int>nums){
     int n=nums.size();
     stack<int>st;
-    vector<int>result(n,-1);
-    for(int i = 0; i < n; i++) {
-    while(!st.empty() && nums[i] < nums[st.top()]) {
-        result[st.top()] = nums[i];
+    vector<int>result;
+   for (int i = 0; i < n; ++i) {
+
+        // While stack is not empty AND top of stack is more
+        // than the current element
+        while (!st.empty() && st.top() > nums[i]) {
+
+            // Pop the top element from the
+            // stack
+            st.pop();
+        }
+
+        // Push the current element into the stack
+        st.push(nums[i]);
+    }
+
+    // Construct the result array from the stack
+    while (!st.empty()) {
+        result.insert(result.begin(), st.top());
         st.pop();
     }
-    st.push(i);
-}
-return result;
+
+    return result;
 }
 
 
