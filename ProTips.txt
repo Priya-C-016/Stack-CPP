@@ -1,0 +1,45 @@
+ 5. Stack with State / Custom Object
+Each stack element stores extra data — like index, count, min, etc.
+
+Pattern: Stack of pairs or structs
+
+Used in problems that require remembering more than just values
+
+Examples:
+
+Asteroid Collision
+
+Remove K Digits
+
+Evaluate Reverse Polish Notation (stack of numbers)
+
+🔹 6. Simulation with Stack
+Simulate actual system behavior like browser history, function calls, or undo operations.
+
+Examples:
+
+Implement Queue using Stacks
+
+Exclusive Time of Functions
+
+Evaluate Expression with Precedence
+
+🔹 7. Two-Pass Stack Approach
+Sometimes, you need to process left-to-right and right-to-left using a stack.
+
+Examples:
+
+Trapping Rain Water
+
+Largest Rectangle in Binary Matrix
+
+🧠 Tips to Master Stack Problems:
+Visualize the stack at every step — draw or print it out.
+
+Use indexes when needed, especially in NGE/Histogram problems.
+
+Recognize monotonic stack situations — increasing or decreasing order.
+
+Think about whether your stack needs to track extra state (like min, index, count).
+
+For string problems — check for matching conditions, not just characters.
