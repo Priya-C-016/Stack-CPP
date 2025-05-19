@@ -1,0 +1,14 @@
+ 4. Min Stack / Max Stack
+Track min/max along with elements using auxiliary stack.
+
+Pattern: Maintain two stacks — one for values, one for min/max.
+
+Or use clever encoding to store min using a single stack.
+
+Examples:
+
+Min Stack (O(1) getMin)
+
+Max Stack
+
+Stack with O(1) middle element
