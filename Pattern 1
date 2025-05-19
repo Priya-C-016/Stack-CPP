@@ -1,0 +1,26 @@
+Next Greater / Smaller Element
+Use a monotonic stack to find the next element greater or smaller.
+
+Pattern: Traverse from left/right, use stack to maintain increasing/decreasing order.
+
+Stack Stores: Usually indices or values.
+
+Time: O(n)
+
+Examples:
+
+Next Greater Element
+
+Next Smaller Element
+
+Daily Temperatures
+
+Stock Span Problem
+
+
+// Monotonic decreasing stack example (Next Greater Element)
+while (!st.empty() && arr[i] > arr[st.top()]) {
+    result[st.top()] = arr[i];
+    st.pop();
+}
+st.push(i);
