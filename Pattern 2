@@ -1,0 +1,14 @@
+2. Histogram Based Area Problems
+Use stack to maintain increasing heights.
+
+Pattern: Push index while current height >= height[stack.top()]
+
+When lower height appears, pop and calculate area.
+
+Add sentinel (0) to force final computation.
+
+Examples:
+
+Largest Rectangle in Histogram
+
+Max Rectangle in Binary Matrix (row by row histogram)
