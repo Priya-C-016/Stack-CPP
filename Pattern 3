@@ -1,0 +1,14 @@
+3. Valid Parentheses / String Validation
+Use stack to check for matching brackets, characters, or nesting.
+
+Pattern: Push opening, pop when matching closing.
+
+Sometimes enhanced with indexing (for longest substring).
+
+Examples:
+
+Valid Parentheses
+
+Longest Valid Parentheses
+
+Remove Invalid Parentheses
